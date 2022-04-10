@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="100%"
+   height="100%"
+   viewBox="0 0 64 64"
+   version="1.1"
+   xml:space="preserve"
+   style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;"
+   id="svg17">
+  <metadata
+   id="metadata23">
+    <rdf:RDF>
+      <cc:Work
+   rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+
+        <dc:type
+   rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+
+      </cc:Work>
+
+    </rdf:RDF>
+
+  </metadata>
+
+  <defs
+   id="defs21" />
+
+  
+  <path
+   d="M36.891,7.664l1.414,1.414"
+   style="fill:none;stroke:#222a33;stroke-width:2px;"
+   id="path3" />
+
+  <path
+   d="M51.033,21.806l-1.414,-1.414"
+   style="fill:none;stroke:#222a33;stroke-width:2px;"
+   id="path5" />
+
+  <path
+   d="M30.527,28.17c1.171,1.171 1.171,3.072 0,4.242c-1.171,1.171 -3.072,1.171 -4.243,0c-1.171,-1.17 -1.171,-3.071 0,-4.242c1.171,-1.171 3.072,-1.171 4.243,0Z"
+   style="fill:none;stroke:#222a33;stroke-width:2px;"
+   id="path7" />
+
+  <path
+   d="M51.858,20.981l-9.428,9.428c-3.17,3.17 -7.938,3.767 -11.71,1.791"
+   style="fill:none;stroke:#222a33;stroke-width:2px;"
+   id="path9" />
+
+  <path
+   d="M26.497,27.977c-1.976,-3.772 -1.379,-8.54 1.791,-11.71l9.428,-9.428"
+   style="fill:none;stroke:#222a33;stroke-width:2px;"
+   id="path11" />
+
+  <path
+   d="M25.754,32.943c0,0 -4.487,4.487 -8.309,8.308c-1.406,1.407 -2.196,3.314 -2.196,5.304c0,1.989 0.79,3.896 2.196,5.303c0,0 0,0 0,0c2.929,2.929 7.678,2.929 10.607,0c4.264,-4.264 9.546,-9.546 9.546,-9.546"
+   style="fill:none;stroke:#222a33;stroke-width:2px;"
+   id="path13" />
+
+  <circle
+   cx="40.5"
+   cy="39"
+   r="3.5"
+   style="fill:none;stroke:#222a33;stroke-width:2px;"
+   id="circle15" />
+
+</svg>

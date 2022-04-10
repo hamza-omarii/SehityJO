@@ -1,0 +1,422 @@
+html
+{
+    height:100%;
+    color:#0286ce;
+}
+
+body
+{
+    background:url('../../../images/login_register/background.jpg') no-repeat center top ;
+    background-size: cover;
+    height:100%;
+    margin: 0;
+    padding: 0 ;
+    overflow: hidden;
+}
+
+
+/*
+====================================
+==   Welcome Page  Are you .. ?   ==
+====================================
+*/
+
+.box
+{
+    background-color: #FFF;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 3px;
+}
+
+
+.am
+{
+    border: 1px solid #0286ce;
+    background-color: #0286ce;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.am a
+{
+    color: #FFF;
+}
+
+
+.am i
+{
+    font-size: 1.5em;
+}
+
+.box h2
+{
+    color: #0286ce;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.3em;
+}
+
+.title{
+    color: #0286ce;
+}
+
+.hvr-icon-bounce
+{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-icon-bounce .hvr-icon
+  {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-icon-bounce:hover .hvr-icon, .hvr-icon-bounce:focus .hvr-icon, .hvr-icon-bounce:active .hvr-icon
+  {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }
+
+
+/*
+====================================
+==          Login Page            ==
+====================================
+*/
+
+
+
+.ftco-no-pt
+{
+    padding-top: 0;
+}
+
+.ftco-no-pb
+{
+    padding-bottom: 0;
+}
+
+.heading-section
+{
+    font-size: 28px;
+    color: #000;
+}
+
+.img
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.wrap
+{
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+
+.img, .login-wrap
+{
+    width: 50%;
+}
+
+@media (max-width: 991.98px)
+{
+    .img, .login-wrap
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px)
+{
+    .wrap .img
+    {
+        height: 250px;
+    }
+}
+
+.login-wrap
+{
+    position: relative;
+    background: #fff h3;
+}
+
+.form-group
+{
+    position: relative;
+}
+
+.form-group .label
+{
+    font-weight: 700;
+}
+
+.form-group a
+{
+    color: gray;
+}
+
+.form-control
+{
+    height: 48px;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-control::-webkit-input-placeholder
+{
+    /* Chrome/Opera/Safari */
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control::-moz-placeholder
+{
+    /* Firefox 19+ */
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control:-ms-input-placeholder
+{
+    /* IE 10+ */
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control:-moz-placeholder
+{
+    /* Firefox 18- */
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+::-webkit-input-placeholder
+{
+    /* Chrome/Opera/Safari */
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+::-moz-placeholder
+{
+    /* Firefox 19+ */
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+:-ms-input-placeholder
+{
+    /* IE 10+ */
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+:-moz-placeholder
+{
+    /* Firefox 18- */
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+
+
+.form-control:focus, .form-control:active
+{
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #0286ce;
+}
+
+.social-media
+{
+position: relative;
+width: 100%;
+}
+
+.social-media .social-icon
+{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-media .social-icon i
+{
+    color: #999999;
+    transition: all 0.3s ease;
+}
+.social-media .social-icon:hover, .social-media .social-icon:focus
+{
+    background: #0286ce;
+    transform: scale(1.2);
+}
+.social-media .social-icon:hover i, .social-media .social-icon:focus i
+{
+    color: #fff;
+}
+
+.checkbox-wrap {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrap input
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark::after
+{
+    content: "\f0c8";
+    font-family: "Font Awesome 5 Free";
+    font-size: 900;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    margin-top: -4px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+@media (prefers-reduced-motion: reduce)
+{
+    .checkmark:after
+    {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    }
+ }
+
+/* Show the checkmark when checked */
+.checkbox-wrap input:checked ~ .checkmark:after
+{
+    display: block;
+    content: "\f14a";
+    font-family: "Font Awesome 5 Free";
+    color: rgba(0, 0, 0, 0.2);
+}
+
+/* Style the checkmark/indicator */
+.checkbox-primary
+{
+    color: #0286ce;
+}
+
+.checkbox-primary input:checked ~ .checkmark:after
+{
+    color: #0286ce;
+}
+
+
+.submit{
+    outline: none !important;
+    border: 1px solid #179ee6;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #179ee6;
+}
+
+
+.title-register , .butt-send-link{
+    background-color: #179ee6;
+    font-weight: bold;
+    color: #FFF;
+    letter-spacing: 2px;
+}
+
+.presonal_info , .clinic_information{
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 4px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.fees{
+    position: relative;
+}
+
+.jd{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    color: #FFF;
+    background-color: crimson;
+    right: 16px;
+    top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        overflow: scroll;
+    }
+}

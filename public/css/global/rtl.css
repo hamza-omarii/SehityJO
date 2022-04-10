@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700;800&display=swap");
+
+body {
+    font-family: "Cairo", sans-serif !important;
+        font-weight: 600;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    transition: all 1s ease;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #777;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #49bcf1;
+}
