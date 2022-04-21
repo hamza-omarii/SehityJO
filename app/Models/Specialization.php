@@ -15,6 +15,11 @@ class Specialization extends Model
     public $timestamps = false;
     protected $table = "specializations";
 
+    /*
+    ================
+    ==  Relation  ==
+    ================
+    */
 
     public function doctors()
     {

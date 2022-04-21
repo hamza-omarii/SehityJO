@@ -1,6 +1,6 @@
 :root {
-    --main-bg-color: #1da7f2;
-    --main-text-color: #1da7f2;
+    --main-bg-color: #0795ff;
+    --main-text-color: #0795ff;
     --second-text-color: #bbbec5;
     --second-bg-color: #fafcff;
 }
@@ -63,14 +63,14 @@
 .list-group-item {
     border: none;
     padding: 20px 30px;
+    transition: all 0.3s ease;
 }
 
-.navbar{
-    background-color: #FFF;
+.navbar {
+    background-color: #fff;
 }
 
-
-.logo-pad{
+.logo-pad {
     padding-bottom: 14px !important;
 }
 
@@ -97,6 +97,96 @@
     border-radius: 4px;
 }
 
-.custom-height{
+.custom-height {
     height: 114px;
+}
+
+.doctor-title {
+    border: 4px dashed #0795ff;
+    width: fit-content;
+    padding: 10px;
+}
+
+.appointments-title {
+    width: 100%;
+    border-bottom: 4px solid #0795ff;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 2px;
+}
+
+.date-box {
+    background-color: #0795ff;
+    padding: 30px;
+    position: relative;
+}
+
+input[type="date"] {
+    background-color: #2da5ff;
+    padding: 8px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 400px;
+    font-weight: bolder;
+}
+::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Radio Btn Style */
+
+.booking {
+    background-color: #fafcff;
+}
+
+.customRadionBtns {
+    padding: 20px;
+    position: relative;
+    width: fit-content;
+}
+
+.customRadionBtns input {
+    appearance: none;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 3px 10px;
+    color: #000;
+    font-size: 20px;
+    font-family: sans-serif;
+    transition: all 0.1s;
+    border: 1px solid #c7dfff;
+    width: 200px;
+}
+
+.customRadionBtns input:checked {
+    background: #0795ff;
+    text-shadow: 0 1px 0px #808080;
+    color: #fff;
+}
+
+.customRadionBtns input::before {
+    content: attr(label);
+    text-align: center;
+}
+
+.doctor-title {
+    border: 4px dashed #0795ff;
+    width: fit-content;
+    padding: 10px;
+}
+
+.list-group-item.active {
+    background-color: #0795ff !important;
+    color: #fff !important;
+    font-size: 1.2rem !important;
 }

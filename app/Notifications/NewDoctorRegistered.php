@@ -36,6 +36,7 @@ class NewDoctorRegistered extends Notification
     public function toDatabase($notifiable)
     {
         return [
+            "id"    => $this->doctor->id,
             "title" => __("notification.newDoctorRegistered"),
             "body"  => __("notification.body", [
                 "nameOfDoctor" => $this->doctor->name,

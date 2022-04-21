@@ -24,7 +24,7 @@ class Doctor extends Authenticatable
     ==  Relation  ==
     ================
     */
-    public function clinck()
+    public function clinic()
     {
         return $this->hasOne(Clinic::class);
     }
@@ -37,6 +37,11 @@ class Doctor extends Authenticatable
     public function specialization()
     {
         return $this->belongsTo(Specialization::class, "specialist_id", "id");
+    }
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class, "doctor_id", "id");
     }
 
     /*
@@ -53,9 +58,18 @@ class Doctor extends Authenticatable
         }
     }
 
-
     public function getIsActiveDeafultAttribute()
     {
-        return ($this->is_active === 0) ? __("dashboard.Not_Active") : __("dashboard.Active");
+        return ($this->is_active === 0) ? __("main.Not_Active") : __("main.Active");
+    }
+
+    public function getTimesAvilableAttribute($value)
+    {
+        return $this->attributes['times_avilable'] = json_decode($value);
+    }
+
+    public function setTimesAvilableAttribute($value)
+    {
+        $this->attributes['times_avilable'] = json_encode($value);
     }
 }

@@ -1,16 +1,16 @@
-@extends("layouts.dashboard_layout.master")
+@extends("layouts.admin_dashboard_layout.master")
 
 @section('title', 'create hospital')
 
 @section('content')
     <form action="{{ route('admin.hospitals.store') }}" class="p-sm-1 p-md-3 rounded bg-white wow fadeInDown" method="POST">
         @csrf
-        <h3 class="text-center primary-text mb-3 fw-bold">{{ __('dashboard.Create New Hospital') }}</h3>
+        <h3 class="text-center primary-text mb-3 fw-bold">{{ __('main.Create New Hospital') }}</h3>
         <div class="row">
             <div class="col-6 wow fadeInLeft">
                 <div class="form-floating mb-4">
                     <input name="name_en" type="text" value="{{ old('name_en') }}" class="form-control @error('name_en') is-invalid @enderror" id="floatingInput">
-                    <label for="floatingInput">{{ __('dashboard.Hospital Name_en') }}</label>
+                    <label for="floatingInput">{{ __('main.Hospital Name_en') }}</label>
                     @error('name_en')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -21,7 +21,7 @@
             <div class="col-6 wow fadeInRight">
                 <div class="form-floating mb-4">
                     <input name="name_ar" type="text" value="{{ old('name_ar') }}" class="form-control @error('name_ar') is-invalid @enderror" id="floatingInput">
-                    <label for="floatingInput">{{ __('dashboard.Hospital Name_ar') }}</label>
+                    <label for="floatingInput">{{ __('main.Hospital Name_ar') }}</label>
                     @error('name_ar')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -38,7 +38,7 @@
                     <option value="{{ $city->id }}">{{ $city->name }}</option>
                 @endforeach
             </select>
-            <label for="floatingSelect">{{ __('dashboard.Choose City') }} :</label>
+            <label for="floatingSelect">{{ __('main.Choose City') }} :</label>
             @error('city_id')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -46,7 +46,7 @@
             @enderror
         </div>
         <div class="mb-4">
-            <label class="mb-2">{{ __('dashboard.specializations') }} :</label>
+            <label class="mb-2">{{ __('main.specializations') }} :</label>
             <div class="row">
                 @foreach ($specializations as $spec)
                     <div class="col-3">

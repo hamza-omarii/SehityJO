@@ -24,7 +24,6 @@ class CreateClinicsTable extends Migration
             $table->string("waiting_time");
             $table->string("address")->nullable();
             $table->tinyInteger("fees")->unsigned();
-
             $table->foreign("hospital_id")->references("id")->on("hospitals")->onDelete("CASCADE")->onUpdate("CASCADE");
             $table->foreign("doctor_id")->references("id")->on("doctors")->onDelete("CASCADE")->onUpdate("CASCADE");
         });

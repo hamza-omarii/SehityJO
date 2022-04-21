@@ -12,6 +12,13 @@ class Hospital extends Model
     protected $table = "hospitals";
     public $translatable = ['name'];
 
+
+    /*
+    ================
+    ==  Relation  ==
+    ================
+    */
+
     public function specializations()
     {
         return $this->belongsToMany(
@@ -22,6 +29,11 @@ class Hospital extends Model
             "id",
             "id",
         );
+    }
+
+    public function doctors()
+    {
+        return $this->hasMany(Doctor::class);
     }
 
     public function city()

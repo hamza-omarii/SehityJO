@@ -33,22 +33,22 @@
                 </div>
                 <div class="row justify-content-center align-items-center">
                     <h3 class="col-11 my-4 text-center title" style="border: 3px solid #0286ce; padding: 10px; border-radius: 3px; font-weight: bold; border-style: dashed">
-                        {{ __('who_are_you.signin_as') }}</h3>
+                        {{ __('main.signin_as') }}</h3>
                 </div>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-4 mb-3">
                         <div class="user am mx-2 d-flex justify-content-center align-items-center">
-                            <a href="{{ route('admin.login') }}" class="hvr-icon-bounce fw-bold text-decoration-none">{{ __('who_are_you.admin') }}<i class="fas fa-user-shield hvr-icon px-2"></i></a>
+                            <a href="{{ route('admin.login') }}" class="hvr-icon-bounce fw-bold text-decoration-none fs-4">{{ __('main.admin') }}<i class="fas fa-user-shield hvr-icon px-2"></i></a>
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-4 mb-3">
                         <div class="user am mx-2 d-flex justify-content-center align-items-center">
-                            <a href="{{ route('doctor.login') }}" class="hvr-icon-bounce fw-bold text-decoration-none">{{ __('who_are_you.doctor') }}<i class="fas fa-user-md hvr-icon px-2"></i></a>
+                            <a href="{{ route('doctor.login') }}" class="hvr-icon-bounce fw-bold text-decoration-none fs-4">{{ __('main.doctor') }}<i class="fas fa-user-md hvr-icon px-2"></i></a>
                         </div>
                     </div>
                     <div class="col-12  col-sm-12 col-md-4 mb-3">
                         <div class="user am mx-2 d-flex justify-content-center align-items-center">
-                            <a href="{{ route('user.login') }}" class="hvr-icon-bounce fw-bold text-decoration-none">{{ __('who_are_you.patient') }}<i class="fas fa-procedures hvr-icon px-2"></i></a>
+                            <a href="{{ route('user.login') }}" class="hvr-icon-bounce fw-bold text-decoration-none fs-4">{{ __('main.patient') }}<i class="fas fa-procedures hvr-icon px-2"></i></a>
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Doctor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,11 +13,11 @@ class DoctorController extends Controller
     public function index(Request $request)
     {
         if ($request->input("type") == "active") {
-            $doctors = Doctor::latest()->where("is_active", 1)->get();
+            $doctors = Doctor::latest()->where("is_active", 1)->paginate();
         } else if ($request->input("type") == "notActive") {
-            $doctors = Doctor::latest()->where("is_active", 0)->get();
+            $doctors = Doctor::latest()->where("is_active", 0)->paginate();
         } else {
-            $doctors = Doctor::latest()->get();
+            $doctors = Doctor::latest()->paginate();
         }
 
         return view("admin.doctors.index", compact("doctors"));
@@ -24,7 +25,7 @@ class DoctorController extends Controller
 
     public function destroy($id)
     {
-
+        DB::table('notifications')->where('type', 'App\Notifications\NewDoctorRegistered')->where('data->id', $id)->delete();
         Doctor::destroy($id);
         return redirect()->route("admin.doctors")->with("failureKey", __("flashMessage.Doctor has been removed successfully"));
     }

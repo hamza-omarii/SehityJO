@@ -12,4 +12,14 @@ class City extends Model
     protected $fillable = ["name"];
     protected $table = "cities";
     public $timestamps = false;
+
+    /*
+    ================
+    ==  Relation  ==
+    ================
+    */
+    public function hospitals()
+    {
+        return $this->hasMany(Hospital::class);
+    }
 }

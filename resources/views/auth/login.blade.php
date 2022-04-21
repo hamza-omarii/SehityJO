@@ -6,26 +6,24 @@
             <div class="box wrap d-md-flex wow fadeInUpBig py-sm-0 py-md-4 px-4">
                 {{-- Dynamic BackGround --}}
             <div class="img img-fluid" @if (isset($url)) @if ($url == 'admin')
-                style="background-image: url('{{ asset('images/login_register/admin.png') }}'); margin-bottom:20px;"
-                @elseif($url == 'doctor')
-                style="background-image: url('{{ asset('images/login_register/doctors.png') }}'); margin-bottom:20px;" @endif @else
+                        style="background-image: url('{{ asset('images/login_register/admin.png') }}'); margin-bottom:20px;"
+                    @elseif($url == 'doctor')
+                        style="background-image: url('{{ asset('images/login_register/doctors.png') }}'); margin-bottom:20px;" @endif @else
                     style="background-image: url('{{ asset('images/login_register/patient.png') }}'); margin-bottom:20px;" @endif >
                 </div>
 
-
-                </form>
                 <div class="login-wrap px-sm-5 p-md-4 p-md-5">
                     <div class="row">
                         <div class="col-sm-12 col-lg-8 justify-content-center">
-                            <h3 class="mb-4 text-center text-lg-start ">{{ __('who_are_you.sign_in') }}
+                            <h3 class="mb-4 text-center text-lg-start text-secondary">{{ __('main.sign_in') }}
                                 @if (isset($url))
                                     @if ($url == 'admin')
-                                        {{ __('who_are_you.admin') }}
+                                        {{ __('main.admin') }}
                                     @else
-                                        {{ __('who_are_you.doctor') }}
+                                        {{ __('main.doctor') }}
                                     @endif
                                 @else
-                                    {{ __('who_are_you.patient') }}
+                                    {{ __('main.patient') }}
                                 @endif
                             </h3>
                         </div>
@@ -94,8 +92,8 @@
 
                     @if (!isset($url))
                         <div class="form-floating mb-3">
-                            <input name="national_id_number" type="number" id="national_id_number" class="form-control my-2 @error('national_id_number') is-invalid @enderror" placeholder="{{ __('who_are_you.national_id_number') }}" autofocus>
-                            <label for="national_id_number">{{ __('who_are_you.national_id_number') }}</label>
+                            <input name="national_id_number" type="number" id="national_id_number" class="form-control my-2 @error('national_id_number') is-invalid @enderror" placeholder="{{ __('main.national_id_number') }}" autofocus>
+                            <label for="national_id_number">{{ __('main.national_id_number') }}</label>
                             @error('national_id_number')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -104,8 +102,8 @@
                         </div>
                     @else
                         <div class="form-floating mb-3">
-                            <input name="email" type="email" id="email" class="form-control my-2 @error('email') is-invalid @enderror" placeholder="{{ __('who_are_you.email') }}" value="{{ old('email') }}" autofocus>
-                            <label for="email">{{ __('who_are_you.email') }}</label>
+                            <input name="email" type="email" id="email" class="form-control my-2 @error('email') is-invalid @enderror" placeholder="{{ __('main.email') }}" value="{{ old('email') }}" autofocus>
+                            <label for="email">{{ __('main.email') }}</label>
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -117,8 +115,8 @@
                     {{-- Password Input --}}
 
                     <div class="form-floating mb-3">
-                        <input name="password" type="password" id="password" autocomplete="off" class="form-control my-2 @error('password') is-invalid @enderror" placeholder="{{ __('who_are_you.password') }}">
-                        <label for="password">{{ __('who_are_you.password') }}</label>
+                        <input name="password" type="password" id="password" autocomplete="off" class="form-control my-2 @error('password') is-invalid @enderror" placeholder="{{ __('main.password') }}">
+                        <label for="password">{{ __('main.password') }}</label>
                         @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -130,7 +128,7 @@
                     {{-- Submit Form --}}
 
                     <div class="form-group">
-                        <button type="submit" class="my-2 hvr-radial-in rounded btn submit px-3 w-100">{{ __('who_are_you.login') }}</button>
+                        <button type="submit" class="my-2 hvr-radial-in rounded btn submit px-3 w-100">{{ __('main.login') }}</button>
                     </div>
 
 
@@ -138,7 +136,7 @@
 
                     <div class="row form-group">
                         <div class="col-12 col-lg-6 text-left my-2">
-                            <label class="checkbox-wrap checkbox-primary mb-0">{{ __('who_are_you.remember_me') }}
+                            <label class="checkbox-wrap checkbox-primary mb-0">{{ __('main.remember_me') }}
                                 <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} class="form-check-input">
                                 <span class="checkmark"></span>
                             </label>
@@ -148,7 +146,7 @@
                             <div class="col-12 col-lg-6 text-sm-start text-lg-end my-2">
                                 @if (Route::has('password.request'))
                                     <a href="{{ route('password.request') }}">
-                                        {{ __('who_are_you.forgot_password') }}
+                                        {{ __('main.forgot_password') }}
                                     </a>
                                 @endif
                             </div>
@@ -156,15 +154,15 @@
                     </div>
 
                     @if (!isset($url))
-                        <p class="text-center my-2">{{ __('who_are_you.not_a_member') }}
-                            <a href="{{ route('user.register') }}">{{ __('who_are_you.sign_up') }}</a>
+                        <p class="text-center my-2">{{ __('main.not_a_member') }}
+                            <a href="{{ route('user.register') }}">{{ __('main.sign_up') }}</a>
                         </p>
                     @endif
 
                     @isset($url)
                         @if ($url == 'doctor')
-                            <p class="text-center my-2">{{ __('who_are_you.not_a_member') }}
-                                <a href="{{ route('doctor.register') }}">{{ __('who_are_you.sign_up') }}</a>
+                            <p class="text-center my-2">{{ __('main.not_a_member') }}
+                                <a href="{{ route('doctor.register') }}">{{ __('main.sign_up') }}</a>
                             </p>
                         @endif
                     @endisset

@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -75,8 +76,39 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         });
 
         Route::middleware(['auth:doctor', 'PreventBackHistory', 'CheckIfActive'])->group(function () {
-            // put your routes here
-            Route::view('/dashboard', 'doctor.dashboard')->name('dashboard');
+
+            // DoctorController
+            Route::get('/edit/profile/{id}', 'DoctorController@editProfile')->name('edit.profile');
+            Route::put('/update/profile/{id}', 'DoctorController@updateProfile')->name('update.profile');
+
+            // DashboardController
+            Route::get("/dashboard", "DashboardController@index")->name("dashboard");
+
+
+            // ArticleController
+            Route::resource("articles", "ArticleController")->except(['create', 'edit', 'show']);
+
+
+            // TimeAvilableController
+            Route::get("show/times/avilable", "TimeAvilableController@showTimesAvilable")->name("show.times");
+            Route::post("update/times/avilable", "TimeAvilableController@updateTimesAvilable")->name("update.times");
+
+
+            // BookingController
+            Route::get("get/appointments", "BookingController@getAppointments")->name("get.appointments");
+            Route::put("update/appointment/{id}", "BookingController@update")->name("update.appointment");
+            Route::delete("destroy/appointment/{id}", "BookingController@destroy")->name("destroy.appointment");
+            Route::put("changeState/appointment/{id}", "BookingController@changeState")->name("changeState.appointment");
+            Route::get("show/appointment/{id}", "BookingController@showAppointment")->name("show.appointment");
+
+
+            // MedicalReportController
+            Route::get("create/medical/report/{id}", "MedicalReportController@create")->name("create.medical.report");
+            Route::post("store/medical/report", "MedicalReportController@store")->name("store.medical.report");
+            Route::get("edit/medical/report/{id}", "MedicalReportController@edit")->name("edit.medical.report");
+            Route::put("update/medical/report/{id}", "MedicalReportController@update")->name("update.medical.report");
+            /* Route::put("destroy/medical/report/{id}", "MedicalReportController@destroy")->name("destroy.medical.report"); */
+
             Route::post('/logout', 'DoctorController@logout')->name('logout');
         });
     });
@@ -97,8 +129,31 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         });
 
         Route::middleware(['auth:web', 'PreventBackHistory'])->group(function () {
-            // put your routes here
-            Route::view('/home', 'user.dashboard')->name('dashboard');
+
+            // Search Controller ( this is home page for user )
+            Route::get("/search/doctor", "SearchController@search")->name("search.doctor");
+            Route::get("/get/hospitals-city/ajax/{id}", "SearchController@get_Hospitals_When_Cities")->name("get.hospitals.city.ajax");
+            Route::get("/get/specialization-hospitals/ajax/{id}", "SearchController@get_Specialization_When_Hospital")->name("get.specialization.hospitals.ajax");
+
+            // MdeicalController
+            Route::get("mdeical/record", "MedicalRecordController@index")->name("mdeical.record");
+
+            // Article Controller
+            Route::get("articles", "ArticleController@index")->name("articles");
+
+
+            // RatingController
+            Route::post("submit/rating", "RatingController@submit")->name("submit.rating");
+
+            // BookingController
+            Route::get("show/doctor/details/{id}", "BookingController@showDoctorDetails")->name("show.doctor.details");
+            Route::post("make/appointment", "BookingController@MakeAppointment")->name("make.appointment");
+            Route::put("update/appointment/{id}", "BookingController@UpdateAppointment")->name("update.appointment");
+            Route::get("get/appointments", "BookingController@getAppoinmentsForUser")->name("get.appointments");
+            Route::get("show/medical/report/{id}", "BookingController@showMedicalReport")->name("show.medical.report");
+            Route::delete("remove/appointment/{id}", "BookingController@deleteAppointment")->name("remove.appointment");
+
+
             Route::post('/logout', 'UserController@logout')->name('logout');
         });
     });

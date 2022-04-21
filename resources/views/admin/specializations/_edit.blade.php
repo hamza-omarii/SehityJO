@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{ __('dashboard.edit_specialization') }} :</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{{ __('main.edit_specialization') }} :</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('admin.specialization.update', $specialization->id) }}" method="POST">
@@ -12,14 +12,14 @@
                 <div class="modal-body">
                     <div class="form-floating mb-3">
                         <input type="text" name="name_en" class="form-control @error('name_en') is-invalid @enderror" id="name_en" value="{{ old('name_en', $specialization->getTranslation('name', 'en')) }}">
-                        <label for="name_en">{{ __('dashboard.name_en') }}</label>
+                        <label for="name_en">{{ __('main.name_en') }}</label>
                         @error('name_en')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" name="name_ar" class="form-control @error('name_ar') is-invalid @enderror" id="name_ar" value="{{ old('name_en', $specialization->getTranslation('name', 'ar')) }}">
-                        <label for="name_ar">{{ __('dashboard.name_ar') }}</label>
+                        <label for="name_ar">{{ __('main.name_ar') }}</label>
                         @error('name_ar')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror

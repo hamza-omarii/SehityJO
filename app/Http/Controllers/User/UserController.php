@@ -62,7 +62,7 @@ class UserController extends Controller
         $creds = $request->only('national_id_number', 'password');
 
         if (Auth::guard('web')->attempt($creds)) {
-            return redirect()->route('user.dashboard');
+            return redirect()->route('user.search.doctor');
         } else {
             return redirect()->route('user.login')->with('fail', 'The National ID Number or Password is incorrect, Try again');
         }

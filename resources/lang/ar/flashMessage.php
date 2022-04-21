@@ -20,4 +20,19 @@ return [
 
     "Suggestion sent successfully"    => "تم ارسال الاقتراح بنجاح",
     "Suggestion deleted successfully" => "تم حذف الاقتراح بنجاح",
+
+    "Appointment Time Has Been Modified Successfully" => "تم تعديل وقت الموعد بنجاح",
+    "Appointment Deleted Successfully" => "تم حذف الموعد بنجاح",
+
+    "Times have been updated successfully" => "تم تحديث الأوقات بنجاح",
+
+    "Appointment State Has Been Modified Successfully" => "تم تعديل حالة الموعد بنجاح",
+
+    "Medical Report Added Successfully"   => "تم اضافة تقرير طبي بنجاح",
+    "Medical Report Updated Successfully" => "تم تحديث التقرير الطبي بنجاح",
+    "Medical Report Destroy Successfully" => "تم إتلاف التقرير الطبي بنجاح",
+
+    "Thank you for Rated" => "شكرًا لك على التقييم",
+    "The Link you Followed Was Broken" => "الرابط الذي اتبعته معطل",
+    "You have not visited the doctor before so you cannot rating" => "لم تقم بزيارة الطبيب من قبل لذا لا يمكنك التقييم",
 ];

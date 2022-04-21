@@ -5,13 +5,8 @@ use Illuminate\Database\Seeder;
 
 class ClinicSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
-        factory(Clinic::class, 25)->create();
+        factory(Clinic::class, 2500)->create();
     }
 }

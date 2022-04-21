@@ -1,4 +1,4 @@
-@extends("layouts.dashboard_layout.master")
+@extends("layouts.admin_dashboard_layout.master")
 
 @section('title', 'specializations')
 
@@ -29,14 +29,14 @@
     @endif
 
     <button type="button" class="btn primary-bg text-white w-100 fw-bold mb-3 wow fadeInDown" data-bs-toggle="modal" data-bs-target="#createModal">
-        {{ __('dashboard.create_new_specialization') }}
+        {{ __('main.create_new_specialization') }}
     </button>
 
     <table class="table rounded wow bounceInUp" style="border-radius: 10px">
         <thead>
             <tr>
                 <th>#</th>
-                <th>{{ __('dashboard.name') }}</th>
+                <th>{{ __('main.name') }}</th>
                 <th>{{ __('global.processes') }}</th>
             </tr>
         </thead>
@@ -46,7 +46,7 @@
                     <th>{{ $loop->iteration }}</th>
                     <td>{{ $specialization->name }}</td>
                     <td class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#editModal{{ $specialization->id }}">
+                        <button type="button" class="btn primary-bg text-white mx-2" data-bs-toggle="modal" data-bs-target="#editModal{{ $specialization->id }}">
                             <i class="fas fa-edit mx-2"></i>{{ __('global.edit') }}
                         </button>
                         <form action="{{ route('admin.specialization.destroy', $specialization->id) }}" method="POST">
@@ -59,7 +59,7 @@
                 @include('admin.specializations._edit')
             @empty
                 <tr>
-                    <td colspan="3">{{ __('dashboard.There are no registered specializations yet') }}</td>
+                    <td colspan="3">{{ __('main.There are no registered specializations yet') }}</td>
                 </tr>
             @endforelse
         </tbody>

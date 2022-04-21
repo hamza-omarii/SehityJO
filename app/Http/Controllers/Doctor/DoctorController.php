@@ -135,6 +135,19 @@ class DoctorController extends Controller
         return $specialization_hospitals->specializations;
     }
 
+    public function editProfile($id)
+    {
+        $doctor = Doctor::with("clinic")->findOrFail($id);
+        $hospitals = Hospital::all(['id', 'name']);
+        $specializations = Specialization::all(['id', 'name']);
+
+        return view("doctor.profile.edit", compact("doctor", "hospitals", "specializations"));
+    }
+
+    public function updateProfile($id)
+    {
+    }
+
     function logout()
     {
         Auth::guard('doctor')->logout();

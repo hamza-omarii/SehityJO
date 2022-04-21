@@ -10,13 +10,10 @@ class CheckIfActive
 
     public function handle($request, Closure $next)
     {
-
-
         if (!Auth::guard('doctor')->user()->is_active) {
             Auth::guard('doctor')->logout();
-            return redirect()->route("doctor.login")->with('need_approval', trans('who_are_you.need_approval'));
+            return redirect()->route("doctor.login")->with('need_approval', trans('main.need_approval'));
         }
-
         return $next($request);
     }
 }

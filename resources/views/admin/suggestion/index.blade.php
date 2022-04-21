@@ -1,8 +1,10 @@
-@extends("layouts.dashboard_layout.master")
+@extends("layouts.admin_dashboard_layout.master")
 
 @section('title', 'suggestions')
 
 @section('content')
+    <h2 class="text-secondary text-center mb-3 h1">{{ __('main.Complaints And Suggestions') }} :</h2>
+
     @foreach ($suggestions as $suggestion)
         <div class="card mb-3 mx-auto wow fadeInLeft position-relative" style="width: 90%">
             <div class="card-header primary-bg text-white d-flex justfiy-content-center align-items-center">

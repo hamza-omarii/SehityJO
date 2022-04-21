@@ -19,10 +19,9 @@ class CreateBookingsTable extends Migration
             $table->unsignedBigInteger("user_id");
             $table->unsignedBigInteger("doctor_id");
             $table->date("booking_date");
-            $table->time("start_at");
-            $table->time("end_at");
+            $table->string("booking_time");
+            $table->enum("status", ["done", "pending", "failed"])->default("pending");
             $table->timestamps();
-
             $table->foreign("hospital_id")->references("id")->on("hospitals");
             $table->foreign("user_id")->references("id")->on("users");
             $table->foreign("doctor_id")->references("id")->on("doctors");

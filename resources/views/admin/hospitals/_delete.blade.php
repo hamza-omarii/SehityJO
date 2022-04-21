@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>{{ __('dashboard.All doctors and specialties related to this hospital will be deleted') }}</p>
+                <p>{{ __('main.All doctors and specialties related to this hospital will be deleted') }}</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('global.close') }}</button>

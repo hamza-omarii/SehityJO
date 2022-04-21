@@ -13,19 +13,15 @@ class RedirectIfAuthenticated
     {
         $guards = empty($guards) ? [null] : $guards;
 
-        foreach ($guards as $guard)
-        {
-            if (Auth::guard($guard)->check())
-            {
-                if($guard === 'admin')
-                {
+        foreach ($guards as $guard) {
+            if (Auth::guard($guard)->check()) {
+                if ($guard === 'admin') {
                     return redirect()->route('admin.dashboard');
                 }
-                if($guard === 'doctor')
-                {
+                if ($guard === 'doctor') {
                     return redirect()->route('doctor.dashboard');
                 }
-                return redirect()->route('user.dashboard');
+                return redirect()->route('user.search.doctor');
             }
         }
         return $next($request);

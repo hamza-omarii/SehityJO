@@ -21,4 +21,18 @@ return [
     "Suggestion sent successfully"    => "Suggestion sent successfully",
     "Suggestion deleted successfully" => "Suggestion deleted successfully",
 
+    "Appointment Time Has Been Modified Successfully" => "Appointment Time Has Been Modified Successfully",
+    "Appointment Deleted Successfully" => "Appointment Deleted Successfully",
+
+    "Times have been updated successfully" => "Times have been updated successfully",
+
+    "Appointment State Has Been Modified Successfully" => "Appointment State Has Been Modified Successfully",
+
+    "Medical Report Added Successfully" => "Medical Report Added Successfully",
+    "Medical Report Updated Successfully" => "Medical Report Updated Successfully",
+    "Medical Report Destroy Successfully" => "Medical Report Destroy Successfully",
+
+    "Thank you for Rated" => "Thank You For Rated",
+    "The Link you Followed Was Broken" => "The Link you Followed Was Broken",
+    "You have not visited the doctor before so you cannot rating" => "You have not visited the doctor before so you cannot rating",
 ];
