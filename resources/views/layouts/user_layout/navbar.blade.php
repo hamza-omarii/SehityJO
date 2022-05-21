@@ -37,9 +37,6 @@
                             <li class="nav-item {{ Route::currentRouteNamed('user.search.doctor') ? 'active custom-margin' : '' }}">
                                 <a href="{{ route('user.search.doctor') }}" data-toggle="tab" class="nav-link " aria-current="page">{{ __('main.Appointment Booking') }}</a>
                             </li>
-                            <li class="nav-item {{ Route::currentRouteNamed('#') ? 'active custom-margin' : '' }}">
-                                <a href="#" data-toggle="tab" class="nav-link ">{{ __('main.Blood Donation') }}</a>
-                            </li>
                             <li class="nav-item {{ Route::currentRouteNamed('user.get.appointments') ? 'active custom-margin' : '' }}">
                                 <a href="{{ route('user.get.appointments') }}" class="nav-link ">{{ __('main.Medical Record') }}</a>
                             </li>
