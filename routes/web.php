@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Just For Testing if u work local return public
+// if u work with hosting return public_html
+Route::get("/test/public", function () {
+    return public_path();
+});
+
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
 
     Route::view('/', 'welcome');
